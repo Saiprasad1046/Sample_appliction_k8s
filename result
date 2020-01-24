@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result_pod
+  labels:
+    name: result_pod
+    app: myvoting_app
+
+spec:
+  containers:
+    - name: result
+      image: bretfisher/examplevotingapp_result
+      ports:
+        - containerPort: 80

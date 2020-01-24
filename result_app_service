@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: result_app_service
+  labels:
+    name: result_app_service
+    app: myvoting_app
+
+spec:
+  type: LoadBlance
+  ports:
+    - port: 80
+      targetPort: 80
+
+  selector:
+    name: result_pod
+    app: myvoting_app
